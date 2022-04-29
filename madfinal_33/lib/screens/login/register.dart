@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:madfinal_33/services/auth.dart';
 import 'package:madfinal_33/services/auth.dart';
 
-class Login extends StatefulWidget {
+import '../../main.dart';
+import 'login.dart';
+
+class Register extends StatefulWidget {
   @override
-  _LoginState createState() => _LoginState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _LoginState extends State<Login> {
+class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
   final formKey = GlobalKey<FormState>();
   String email = "";
@@ -80,7 +83,9 @@ class _LoginState extends State<Login> {
                         dynamic result = await _auth
                             .registerWithEmailAndPassword(email, password);
                         if (result == null) {}
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
                       }
+
                     },
                     child: Text('Register'),
                   ),
@@ -90,10 +95,10 @@ class _LoginState extends State<Login> {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/register');
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Login()));
                   },
                   child: Text(
-                    'New user Sign up',
+                    'Already have account?Sign in here.',
                     style: TextStyle(
                       color: Colors.black,
                     ),

@@ -84,7 +84,9 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Chat()));
+                  },
                   child: Icon(Icons.favorite, color: Colors.teal, size: 40.0),
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
@@ -101,3 +103,5 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+

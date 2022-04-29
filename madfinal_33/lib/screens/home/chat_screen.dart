@@ -36,6 +36,7 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           ], text: widget.user.name),
         ),
+        backgroundColor: Colors.pinkAccent,
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             color: Colors.white,
@@ -68,7 +69,7 @@ class _ChatScreenState extends State<ChatScreen> {
                             ),
                           ],
                         ),
-                        child: Text('databssdxfdfsdfvsdfsdfsdf',
+                        child: Text('Lets meet',
                             style: TextStyle(
                               color: Colors.black54,
                             )),
@@ -87,7 +88,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           ]),
                           child: CircleAvatar(
                             radius: 15,
-                            backgroundImage: AssetImage('assets/user1.jpg'),
+                            backgroundImage: AssetImage('assets/night.jpg'),
                           ),
                         ),
                         SizedBox(
@@ -124,13 +125,14 @@ class _ChatScreenState extends State<ChatScreen> {
                             ),
                           ],
                         ),
-                        child: Text('databssdxfdfsdfvsdfsdfsdf',
+                        child: Text('Lets go for a coffee date',
                             style: TextStyle(
                               color: Colors.white,
                             )),
                       ),
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         Container(
                           decoration:
@@ -160,12 +162,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     ),
                   ],
                 ),
-                Container(
-                  child: Text('data'),
-                ),
-                Container(
-                  child: Text('data'),
-                ),
+
               ],
             ),
           ),

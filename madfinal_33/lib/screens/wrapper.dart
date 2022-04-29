@@ -4,6 +4,8 @@ import 'package:madfinal_33/models/user.dart';
 import 'package:madfinal_33/screens/login/login.dart';
 import 'package:provider/provider.dart';
 
+import 'login/register.dart';
+
 class Wrapper extends StatefulWidget {
   const Wrapper({Key? key}) : super(key: key);
 
@@ -20,6 +22,6 @@ class _WrapperState extends State<Wrapper> {
     print(user);
     print('wrapper class is executing');
 
-    return user == null ? Login() : Home();
+    return user == null ? Register() : Home();
   }
 }

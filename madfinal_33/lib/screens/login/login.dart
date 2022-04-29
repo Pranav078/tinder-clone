@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:madfinal_33/screens/login/register.dart';
 import 'package:madfinal_33/services/auth.dart';
 import 'package:madfinal_33/services/auth.dart';
+
+import '../../main.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -80,7 +83,9 @@ class _LoginState extends State<Login> {
                         dynamic result = await _auth.signInWithEmailAndPassword(
                             email, password);
                         if (result == null) {}
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
                       }
+
                     },
                     child: Text('Sign in'),
                   ),
@@ -90,7 +95,7 @@ class _LoginState extends State<Login> {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/register');
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Register()));
                   },
                   child: Text(
                     'New user Sign up',
